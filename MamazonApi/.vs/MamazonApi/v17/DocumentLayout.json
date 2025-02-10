@@ -1,0 +1,92 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Mamazon\\mamazon-back-end-v1\\MamazonApi\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7B2586FE-4F10-42C2-B753-D89E69537A49}|MamazonApi\\MamazonApi.csproj|e:\\mamazon\\mamazon-back-end-v1\\mamazonapi\\mamazonapi\\repository\\dto\\userdtorequestlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7B2586FE-4F10-42C2-B753-D89E69537A49}|MamazonApi\\MamazonApi.csproj|solutionrelative:mamazonapi\\repository\\dto\\userdtorequestlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B2586FE-4F10-42C2-B753-D89E69537A49}|MamazonApi\\MamazonApi.csproj|e:\\mamazon\\mamazon-back-end-v1\\mamazonapi\\mamazonapi\\repository\\userstable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7B2586FE-4F10-42C2-B753-D89E69537A49}|MamazonApi\\MamazonApi.csproj|solutionrelative:mamazonapi\\repository\\userstable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B2586FE-4F10-42C2-B753-D89E69537A49}|MamazonApi\\MamazonApi.csproj|e:\\mamazon\\mamazon-back-end-v1\\mamazonapi\\mamazonapi\\services\\loginservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7B2586FE-4F10-42C2-B753-D89E69537A49}|MamazonApi\\MamazonApi.csproj|solutionrelative:mamazonapi\\services\\loginservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B2586FE-4F10-42C2-B753-D89E69537A49}|MamazonApi\\MamazonApi.csproj|e:\\mamazon\\mamazon-back-end-v1\\mamazonapi\\mamazonapi\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7B2586FE-4F10-42C2-B753-D89E69537A49}|MamazonApi\\MamazonApi.csproj|solutionrelative:mamazonapi\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 25,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserDTORequestLogin.cs",
+              "DocumentMoniker": "E:\\Mamazon\\mamazon-back-end-v1\\MamazonApi\\MamazonApi\\Repository\\DTO\\UserDTORequestLogin.cs",
+              "RelativeDocumentMoniker": "MamazonApi\\Repository\\DTO\\UserDTORequestLogin.cs",
+              "ToolTip": "E:\\Mamazon\\mamazon-back-end-v1\\MamazonApi\\MamazonApi\\Repository\\DTO\\UserDTORequestLogin.cs",
+              "RelativeToolTip": "MamazonApi\\Repository\\DTO\\UserDTORequestLogin.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-10T18:05:49.502Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UsersTable.cs",
+              "DocumentMoniker": "E:\\Mamazon\\mamazon-back-end-v1\\MamazonApi\\MamazonApi\\Repository\\UsersTable.cs",
+              "RelativeDocumentMoniker": "MamazonApi\\Repository\\UsersTable.cs",
+              "ToolTip": "E:\\Mamazon\\mamazon-back-end-v1\\MamazonApi\\MamazonApi\\Repository\\UsersTable.cs",
+              "RelativeToolTip": "MamazonApi\\Repository\\UsersTable.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-10T17:56:30.65Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LoginService.cs",
+              "DocumentMoniker": "E:\\Mamazon\\mamazon-back-end-v1\\MamazonApi\\MamazonApi\\Services\\LoginService.cs",
+              "RelativeDocumentMoniker": "MamazonApi\\Services\\LoginService.cs",
+              "ToolTip": "E:\\Mamazon\\mamazon-back-end-v1\\MamazonApi\\MamazonApi\\Services\\LoginService.cs",
+              "RelativeToolTip": "MamazonApi\\Services\\LoginService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-10T15:47:11.97Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "E:\\Mamazon\\mamazon-back-end-v1\\MamazonApi\\MamazonApi\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "MamazonApi\\Controllers\\LoginController.cs",
+              "ToolTip": "E:\\Mamazon\\mamazon-back-end-v1\\MamazonApi\\MamazonApi\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "MamazonApi\\Controllers\\LoginController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-10T17:44:51.417Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
