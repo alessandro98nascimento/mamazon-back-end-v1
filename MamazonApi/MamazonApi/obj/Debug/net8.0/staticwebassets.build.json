@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "EJgbqgwE57foENRYuCT/rHVwwKb3cj/Osrzz2TB4zHE=",
+  "Source": "MamazonApi",
+  "BasePath": "_content/MamazonApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
