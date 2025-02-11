@@ -1,7 +1,9 @@
-﻿using MamazonApi.Context;
+﻿using Azure;
+using MamazonApi.Context;
 using MamazonApi.Models;
 using MamazonApi.Repository;
 using MamazonApi.Repository.DTO;
+using MamazonApi.Services.DTO;
 using Microsoft.EntityFrameworkCore;
 
 namespace MamazonApi.Services
@@ -17,11 +19,30 @@ namespace MamazonApi.Services
 
         public LoginService(AppDbContext? context) { _context = new UsersTable(); }
 
-        public User? GetUser(UserDTORequestLogin request)
-        {   
+        public UserDTO? GetUser(UserDTORequestLogin request)
+        {
             var responseDb = _context.GetUser(request);
-            return responseDb;
-        }
 
+            if (responseDb == null) return null;
+            
+
+            UserDTO user = new UserDTO
+            {
+                UserId = responseDb.UserId,
+                UserName = responseDb.UserName,
+                Email = responseDb.Email,
+                Password = responseDb.Password,
+                Adress = responseDb.Adress,
+                NumberHouse = responseDb.NumberHouse,
+                Cep = responseDb.Cep,
+                Complement = responseDb.Complement,
+                Neighborhood = responseDb.Neighborhood,
+                City = responseDb.City,
+                State = responseDb.State,
+                ActiveUser = responseDb.ActiveUser,
+            };
+
+            return user;
+        }
     }
 }

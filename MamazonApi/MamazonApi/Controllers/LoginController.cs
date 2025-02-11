@@ -19,10 +19,9 @@ namespace MamazonApi.Controllers
         {
             var reponse = _context.GetUser(request);
 
-            if (reponse == null)  return BadRequest(new { message = "email ou senha invalida" });
+            if (reponse == null)  return BadRequest(new { });
 
-            return Ok(new { token = "login feito com sucesso"});
+            return Ok(new { token = "blablabla" });
         }
-
     }
 }
