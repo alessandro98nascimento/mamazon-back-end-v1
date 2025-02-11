@@ -14,8 +14,27 @@ namespace MamazonApi.Repository
 
         public User? GetUser(UserDTORequestLogin request)
         {
-            var dbResponse = _context.Users.FirstOrDefault(user => user.Email == request.Email && user.Password == request.Password);
+            User? dbResponse = _context.Users.FirstOrDefault(user => user.Email == request.Email && user.Password == request.Password);
             return dbResponse;
         }
-    }
+
+        public User? GetUserByEmail(UserEmailRequestDTO request)
+        {
+            User? dbResponse = _context.Users.FirstOrDefault(user => user.Email == request.Email);
+
+            return dbResponse;
+        }
+
+        public User? PutUserPassword(UserNewPasswordRequestDTO request)
+        {
+            User? dbResponse = _context.Users.FirstOrDefault(userDb => userDb.Email == request.Email);
+            dbResponse.Password = request.Password;
+
+            _context.Users.Update(dbResponse);
+
+            _context.SaveChanges();
+
+            return dbResponse;
+        }
+    }   
 }
