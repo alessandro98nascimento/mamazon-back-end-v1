@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MamazonApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3b548d1ae5728d61f210a0ae832982855f968d90")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dfbca2544827e744ad5bd471aa6d09336b6b8a69")]
 [assembly: System.Reflection.AssemblyProductAttribute("MamazonApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MamazonApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

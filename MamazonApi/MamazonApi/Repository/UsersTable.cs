@@ -36,5 +36,13 @@ namespace MamazonApi.Repository
 
             return dbResponse;
         }
+
+        public User? PostNewUser(User request)
+        {
+            _context.Users.Add(request);
+            _context.SaveChanges();
+            User? newUser = _context.Users.FirstOrDefault(user => user.Password == request.Password);
+            return newUser;
+        }
     }   
 }

@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MamazonApi.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250210153805_PopulaTabela")]
-    partial class PopulaTabela
+    [Migration("20250212132143_Inicial")]
+    partial class Inicial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

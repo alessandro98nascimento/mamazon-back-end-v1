@@ -23,7 +23,7 @@ namespace MamazonApi.Services
         {
             var responseDb = _context.GetUser(request);
 
-            if (responseDb == null) return null;
+            if (responseDb == null || responseDb.ActiveUser == 0) return null;
             
 
             UserDTO user = new UserDTO

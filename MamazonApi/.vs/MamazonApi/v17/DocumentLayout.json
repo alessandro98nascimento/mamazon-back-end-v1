@@ -3,20 +3,28 @@
   "WorkspaceRootPath": "E:\\Mamazon\\mamazon-back-end-v1\\MamazonApi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7B2586FE-4F10-42C2-B753-D89E69537A49}|MamazonApi\\MamazonApi.csproj|e:\\mamazon\\mamazon-back-end-v1\\mamazonapi\\mamazonapi\\controllers\\forgetpasswordcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7B2586FE-4F10-42C2-B753-D89E69537A49}|MamazonApi\\MamazonApi.csproj|solutionrelative:mamazonapi\\controllers\\forgetpasswordcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7B2586FE-4F10-42C2-B753-D89E69537A49}|MamazonApi\\MamazonApi.csproj|e:\\mamazon\\mamazon-back-end-v1\\mamazonapi\\mamazonapi\\repository\\dto\\userdtorequestforgetpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7B2586FE-4F10-42C2-B753-D89E69537A49}|MamazonApi\\MamazonApi.csproj|solutionrelative:mamazonapi\\repository\\dto\\userdtorequestforgetpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7B2586FE-4F10-42C2-B753-D89E69537A49}|MamazonApi\\MamazonApi.csproj|e:\\mamazon\\mamazon-back-end-v1\\mamazonapi\\mamazonapi\\services\\forgetpasswordservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7B2586FE-4F10-42C2-B753-D89E69537A49}|MamazonApi\\MamazonApi.csproj|solutionrelative:mamazonapi\\services\\forgetpasswordservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7B2586FE-4F10-42C2-B753-D89E69537A49}|MamazonApi\\MamazonApi.csproj|e:\\mamazon\\mamazon-back-end-v1\\mamazonapi\\mamazonapi\\repository\\userstable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7B2586FE-4F10-42C2-B753-D89E69537A49}|MamazonApi\\MamazonApi.csproj|solutionrelative:mamazonapi\\repository\\userstable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B2586FE-4F10-42C2-B753-D89E69537A49}|MamazonApi\\MamazonApi.csproj|e:\\mamazon\\mamazon-back-end-v1\\mamazonapi\\mamazonapi\\services\\signupservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7B2586FE-4F10-42C2-B753-D89E69537A49}|MamazonApi\\MamazonApi.csproj|solutionrelative:mamazonapi\\services\\signupservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B2586FE-4F10-42C2-B753-D89E69537A49}|MamazonApi\\MamazonApi.csproj|e:\\mamazon\\mamazon-back-end-v1\\mamazonapi\\mamazonapi\\controllers\\signupcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7B2586FE-4F10-42C2-B753-D89E69537A49}|MamazonApi\\MamazonApi.csproj|solutionrelative:mamazonapi\\controllers\\signupcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B2586FE-4F10-42C2-B753-D89E69537A49}|MamazonApi\\MamazonApi.csproj|e:\\mamazon\\mamazon-back-end-v1\\mamazonapi\\mamazonapi\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7B2586FE-4F10-42C2-B753-D89E69537A49}|MamazonApi\\MamazonApi.csproj|solutionrelative:mamazonapi\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B2586FE-4F10-42C2-B753-D89E69537A49}|MamazonApi\\MamazonApi.csproj|e:\\mamazon\\mamazon-back-end-v1\\mamazonapi\\mamazonapi\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7B2586FE-4F10-42C2-B753-D89E69537A49}|MamazonApi\\MamazonApi.csproj|solutionrelative:mamazonapi\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B2586FE-4F10-42C2-B753-D89E69537A49}|MamazonApi\\MamazonApi.csproj|e:\\mamazon\\mamazon-back-end-v1\\mamazonapi\\mamazonapi\\services\\loginservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7B2586FE-4F10-42C2-B753-D89E69537A49}|MamazonApi\\MamazonApi.csproj|solutionrelative:mamazonapi\\services\\loginservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 25,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,54 +42,101 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UserDTORequestForgetPassword.cs",
-              "DocumentMoniker": "E:\\Mamazon\\mamazon-back-end-v1\\MamazonApi\\MamazonApi\\Repository\\DTO\\UserDTORequestForgetPassword.cs",
-              "RelativeDocumentMoniker": "MamazonApi\\Repository\\DTO\\UserDTORequestForgetPassword.cs",
-              "ToolTip": "E:\\Mamazon\\mamazon-back-end-v1\\MamazonApi\\MamazonApi\\Repository\\DTO\\UserDTORequestForgetPassword.cs",
-              "RelativeToolTip": "MamazonApi\\Repository\\DTO\\UserDTORequestForgetPassword.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAqAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "User.cs",
+              "DocumentMoniker": "E:\\Mamazon\\mamazon-back-end-v1\\MamazonApi\\MamazonApi\\Models\\User.cs",
+              "RelativeDocumentMoniker": "MamazonApi\\Models\\User.cs",
+              "ToolTip": "E:\\Mamazon\\mamazon-back-end-v1\\MamazonApi\\MamazonApi\\Models\\User.cs",
+              "RelativeToolTip": "MamazonApi\\Models\\User.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAgwC0AAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-11T19:11:42.358Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ForgetPasswordController.cs",
-              "DocumentMoniker": "E:\\Mamazon\\mamazon-back-end-v1\\MamazonApi\\MamazonApi\\Controllers\\ForgetPasswordController.cs",
-              "RelativeDocumentMoniker": "MamazonApi\\Controllers\\ForgetPasswordController.cs",
-              "ToolTip": "E:\\Mamazon\\mamazon-back-end-v1\\MamazonApi\\MamazonApi\\Controllers\\ForgetPasswordController.cs",
-              "RelativeToolTip": "MamazonApi\\Controllers\\ForgetPasswordController.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAxwCEAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-11T18:55:01.252Z",
+              "WhenOpened": "2025-02-12T13:18:54.186Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "ForgetPasswordService.cs",
-              "DocumentMoniker": "E:\\Mamazon\\mamazon-back-end-v1\\MamazonApi\\MamazonApi\\Services\\ForgetPasswordService.cs",
-              "RelativeDocumentMoniker": "MamazonApi\\Services\\ForgetPasswordService.cs",
-              "ToolTip": "E:\\Mamazon\\mamazon-back-end-v1\\MamazonApi\\MamazonApi\\Services\\ForgetPasswordService.cs",
-              "RelativeToolTip": "MamazonApi\\Services\\ForgetPasswordService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAzAAAAAAAAAA==",
+              "Title": "SignUpController.cs",
+              "DocumentMoniker": "E:\\Mamazon\\mamazon-back-end-v1\\MamazonApi\\MamazonApi\\Controllers\\SignUpController.cs",
+              "RelativeDocumentMoniker": "MamazonApi\\Controllers\\SignUpController.cs",
+              "ToolTip": "E:\\Mamazon\\mamazon-back-end-v1\\MamazonApi\\MamazonApi\\Controllers\\SignUpController.cs",
+              "RelativeToolTip": "MamazonApi\\Controllers\\SignUpController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-11T18:58:52.565Z",
+              "WhenOpened": "2025-02-12T12:25:21.063Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
+              "Title": "SignUpService.cs",
+              "DocumentMoniker": "E:\\Mamazon\\mamazon-back-end-v1\\MamazonApi\\MamazonApi\\Services\\SignUpService.cs",
+              "RelativeDocumentMoniker": "MamazonApi\\Services\\SignUpService.cs",
+              "ToolTip": "E:\\Mamazon\\mamazon-back-end-v1\\MamazonApi\\MamazonApi\\Services\\SignUpService.cs",
+              "RelativeToolTip": "MamazonApi\\Services\\SignUpService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T12:24:18.166Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "UsersTable.cs",
               "DocumentMoniker": "E:\\Mamazon\\mamazon-back-end-v1\\MamazonApi\\MamazonApi\\Repository\\UsersTable.cs",
               "RelativeDocumentMoniker": "MamazonApi\\Repository\\UsersTable.cs",
               "ToolTip": "E:\\Mamazon\\mamazon-back-end-v1\\MamazonApi\\MamazonApi\\Repository\\UsersTable.cs",
               "RelativeToolTip": "MamazonApi\\Repository\\UsersTable.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAQwBgAAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAowCkAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-10T17:56:30.65Z",
+              "WhenOpened": "2025-02-12T12:33:46.282Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "4310184d-b491-4987-aaef-e377cc44b381",
+        "Display": 1,
+        "X": 81,
+        "Y": 0,
+        "Width": 1602,
+        "Height": 982,
+        "WindowState": 2
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "E:\\Mamazon\\mamazon-back-end-v1\\MamazonApi\\MamazonApi\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "MamazonApi\\Controllers\\LoginController.cs",
+              "ToolTip": "E:\\Mamazon\\mamazon-back-end-v1\\MamazonApi\\MamazonApi\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "MamazonApi\\Controllers\\LoginController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T12:26:49.553Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LoginService.cs",
+              "DocumentMoniker": "E:\\Mamazon\\mamazon-back-end-v1\\MamazonApi\\MamazonApi\\Services\\LoginService.cs",
+              "RelativeDocumentMoniker": "MamazonApi\\Services\\LoginService.cs",
+              "ToolTip": "E:\\Mamazon\\mamazon-back-end-v1\\MamazonApi\\MamazonApi\\Services\\LoginService.cs",
+              "RelativeToolTip": "MamazonApi\\Services\\LoginService.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwBsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T12:18:27.315Z",
               "EditorCaption": ""
             }
           ]
