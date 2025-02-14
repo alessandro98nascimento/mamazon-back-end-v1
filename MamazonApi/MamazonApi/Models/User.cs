@@ -1,51 +1,30 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MamazonApi.Models
 {
     public class User
     {
+        [Key]
         public int UserId { get; set; }
-        [Required]
-        [StringLength(200)]
-        public string? UserName { get; set; }
-
-        [Required]
-        [EmailAddress]
-        [StringLength(200)]
-        public string? Email { get; set; }
 
         [Required]
         [StringLength(200)]
-        public string? Password { get; set; }
+        public required string UserName { get; set; }
 
         [Required]
-        [StringLength(500)]
-        public string? Adress { get; set; }
+        public required int EmailId { get; set; }
 
         [Required]
-        public int NumberHouse { get; set; }
+        public required int PasswordId { get; set; }
 
         [Required]
-        public int Cep { get; set; }
+        public required int ActiveUser { get; set; } = 1;
 
-        [Required]
-        [StringLength(500)]
-        public string? Complement { get; set; }
+        [ForeignKey("EmailId")]
+        public Email? Email { get; set; }
 
-        [Required]
-        [StringLength(500)]
-        public string? Neighborhood { get; set; }
-
-        [Required]
-        [StringLength(200)]
-        public string? City { get; set; }
-
-        [Required]
-        [StringLength(100)]
-        public string? State { get; set; }
-
-        [Required]
-        public int ActiveUser { get; set; } = 1;
-
+        [ForeignKey("PasswordId")]
+        public Password? Password { get; set; }
     }
 }
