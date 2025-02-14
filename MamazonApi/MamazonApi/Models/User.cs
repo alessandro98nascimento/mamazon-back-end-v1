@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MamazonApi.Models
 {
@@ -6,47 +7,24 @@ namespace MamazonApi.Models
     {
         [Key]
         public int UserId { get; set; }
+
         [Required]
         [StringLength(200)]
         public required string UserName { get; set; }
 
         [Required]
-        [EmailAddress]
-        [StringLength(200)]
-        public required string Email { get; set; }
+        public required int EmailId { get; set; }
 
         [Required]
-        [StringLength(200)]
-        public required string Password { get; set; }
+        public required int PasswordId { get; set; }
 
         [Required]
-        [StringLength(500)]
-        public required string Adress { get; set; }
+        public required int ActiveUser { get; set; } = 1;
 
-        [Required]
-        public int NumberHouse { get; set; }
+        [ForeignKey("EmailId")]
+        public Email? Email { get; set; }
 
-        [Required]
-        public int Cep { get; set; }
-
-        [Required]
-        [StringLength(500)]
-        public required string Complement { get; set; }
-
-        [Required]
-        [StringLength(500)]
-        public required string Neighborhood { get; set; }
-
-        [Required]
-        [StringLength(200)]
-        public required string City { get; set; }
-
-        [Required]
-        [StringLength(100)]
-        public required string State { get; set; }
-
-        [Required]
-        public int ActiveUser { get; set; } = 1;
-
+        [ForeignKey("PasswordId")]
+        public Password? Password { get; set; }
     }
 }

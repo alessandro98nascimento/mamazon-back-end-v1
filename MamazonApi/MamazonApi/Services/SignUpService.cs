@@ -1,4 +1,5 @@
-﻿using Azure.Core;
+﻿/*
+using Azure.Core;
 using MamazonApi.Models;
 using MamazonApi.Repository;
 using MamazonApi.Repository.DTO;
@@ -33,3 +34,4 @@ namespace MamazonApi.Services
         }
     }
 }
+*/
