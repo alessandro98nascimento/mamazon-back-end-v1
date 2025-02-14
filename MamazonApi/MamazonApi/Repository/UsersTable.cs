@@ -1,7 +1,5 @@
-﻿/*
-using MamazonApi.Context;
+﻿using MamazonApi.Context;
 using MamazonApi.Models;
-using MamazonApi.Repository.DTO;
 
 namespace MamazonApi.Repository
 {
@@ -13,37 +11,10 @@ namespace MamazonApi.Repository
             _context = new AppDbContext();        
         }
 
-        public User? GetUser(UserDTORequestLogin request)
+        public User? PostUser(Email email, Password password) 
         {
-            User? dbResponse = _context.Users.FirstOrDefault(user => user.Email == request.Email && user.Password == request.Password);
-            return dbResponse;
+            User? responseDb = _context.Users.FirstOrDefault(u => u.EmailId == email.EmailId && u.PasswordId == password.PasswordId);
+            return responseDb;
         }
-
-        public User? GetUserByEmail(UserEmailRequestDTO request)
-        {
-            User? dbResponse = _context.Users.FirstOrDefault(user => user.Email == request.Email);
-
-            return dbResponse;
-        }
-
-        public User? PutUserPassword(UserNewPasswordRequestDTO request)
-        {
-            User? dbResponse = _context.Users.FirstOrDefault(userDb => userDb.Email == request.Email);
-            dbResponse.Password = request.Password;
-
-            _context.Users.Update(dbResponse);
-
-            _context.SaveChanges();
-
-            return dbResponse;
-        }
-
-        public User? PostNewUser(User request)
-        {
-            _context.Users.Add(request);
-            _context.SaveChanges();
-            User? newUser = _context.Users.FirstOrDefault(user => user.Password == request.Password);
-            return newUser;
-        }
-    }   
-} */
+    }
+}

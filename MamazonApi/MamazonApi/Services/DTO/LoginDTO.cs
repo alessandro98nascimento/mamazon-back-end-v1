@@ -1,7 +1,9 @@
 ﻿namespace MamazonApi.Services.DTO
 {
-    public class MessageDTO
+    public class UserDTO
     {
-        public string? Message { get; set; }
+        public int UserId { get; set; }
+        public string? UserName { get; set; }
+        public int ActiveUser {  get; set; }
     }
 }
