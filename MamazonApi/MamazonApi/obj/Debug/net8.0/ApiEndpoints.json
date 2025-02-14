@@ -1,1 +1,18 @@
-[]
+[
+  {
+    "ContainingType": "MamazonApi.Controllers.LoginController",
+    "Method": "PostUser",
+    "RelativePath": "login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "data",
+        "Type": "MamazonApi.Controllers.DTORequest.RequestLogin",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

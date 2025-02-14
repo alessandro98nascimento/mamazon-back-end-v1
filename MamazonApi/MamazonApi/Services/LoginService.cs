@@ -1,9 +1,7 @@
-﻿/*
-using Azure;
-using MamazonApi.Context;
+﻿using MamazonApi.Context;
+using MamazonApi.Controllers.DTORequest;
 using MamazonApi.Models;
 using MamazonApi.Repository;
-using MamazonApi.Repository.DTO;
 using MamazonApi.Services.DTO;
 using Microsoft.EntityFrameworkCore;
 
@@ -11,40 +9,41 @@ namespace MamazonApi.Services
 {
     public class LoginService
     {
-        private readonly UsersTable _context;
+        private readonly UsersTable _contextUser;
+        private readonly EmailsTable _contextEmail;
+        private readonly PasswordsTable _contextPassword;
 
         public LoginService()
         {
-            _context = new UsersTable();
+            _contextUser = new UsersTable();
+            _contextEmail = new EmailsTable();
+            _contextPassword = new PasswordsTable();
         }
-
-        public LoginService(AppDbContext? context) { _context = new UsersTable(); }
-
-        public UserDTO? GetUser(UserDTORequestLogin request)
+        public Tuple<UserDTO?, string> PostEmailPassword(RequestLogin data)
         {
-            var responseDb = _context.GetUser(request);
+            Email? emailExist = _contextEmail.PostEmail(data);
+            Password? passwordExist = _contextPassword.PostPassword(data);
 
-            if (responseDb == null || responseDb.ActiveUser == 0) return null;
-            
+            if (emailExist == null || passwordExist == null) return new Tuple<UserDTO?, string>(null, "Email ou senha invalida!");
 
-            UserDTO user = new UserDTO
+            User? userValid = _contextUser.PostUser(emailExist, passwordExist);
+
+            if (userValid == null) return new Tuple<UserDTO?, string>(null, "Usuário não encontrado!");
+
+            UserDTO? user = new UserDTO
             {
-                UserId = responseDb.UserId,
-                UserName = responseDb.UserName,
-                Email = responseDb.Email,
-                Password = responseDb.Password,
-                Adress = responseDb.Adress,
-                NumberHouse = responseDb.NumberHouse,
-                Cep = responseDb.Cep,
-                Complement = responseDb.Complement,
-                Neighborhood = responseDb.Neighborhood,
-                City = responseDb.City,
-                State = responseDb.State,
-                ActiveUser = responseDb.ActiveUser,
+                UserId = userValid.UserId,
+                UserName = userValid.UserName,
+                ActiveUser = userValid.ActiveUser,
             };
 
-            return user;
+            if (user.ActiveUser == 0)
+            {
+                return new Tuple<UserDTO?, string>(null, "Conta desativada!");
+            }
+
+            return new Tuple<UserDTO?, string>(user, "Ok!");
+            
         }
     }
 }
-*/
