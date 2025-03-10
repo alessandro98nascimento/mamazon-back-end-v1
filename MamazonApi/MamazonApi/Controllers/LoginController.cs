@@ -17,12 +17,10 @@ namespace MamazonApi.Controllers
 
         public ActionResult PostUser([FromBody] RequestLogin data)
         {
-            var reponse = _context.PostEmailPassword(data);
+            var response = _context.PostEmailPassword(data);
 
-            if(reponse.Item2 == "Email ou senha invalida!") return BadRequest("Email ou senha invalida!");
-            if(reponse.Item2 == "Usuário não encontrado!") return BadRequest("Usuário não encontrado!");
-            if (reponse.Item2 == "Conta desativada!") return Unauthorized("Conta desativada!");
-            return Ok(reponse.Item1);
+            if(response.User == null) return BadRequest(response.Message);
+            return Ok(response.User);
         }
     }
 }

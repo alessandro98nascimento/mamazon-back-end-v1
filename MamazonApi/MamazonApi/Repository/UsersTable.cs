@@ -11,9 +11,9 @@ namespace MamazonApi.Repository
             _context = new AppDbContext();        
         }
 
-        public User? PostUser(Email email, Password password) 
+        public User? PostUser(Email email) 
         {
-            User? responseDb = _context.Users.FirstOrDefault(u => u.EmailId == email.EmailId && u.PasswordId == password.PasswordId);
+            User? responseDb = _context.Users.FirstOrDefault(u => u.EmailId == email.EmailId);
             return responseDb;
         }
     }

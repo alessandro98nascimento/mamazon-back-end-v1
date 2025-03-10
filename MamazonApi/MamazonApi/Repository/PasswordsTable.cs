@@ -12,9 +12,9 @@ namespace MamazonApi.Repository
             _context = new AppDbContext();
         }
 
-        public Password? PostPassword(RequestLogin data)
+        public Password? PostPassword(int passwordId)
         {
-            Password? reponseDb = _context.Passwords.FirstOrDefault((p) => p.UserPassword == data.Password);
+            Password? reponseDb = _context.Passwords.FirstOrDefault((p) => p.PasswordId == passwordId);
             return reponseDb;
         }
     }

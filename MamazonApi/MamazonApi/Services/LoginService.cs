@@ -19,16 +19,33 @@ namespace MamazonApi.Services
             _contextEmail = new EmailsTable();
             _contextPassword = new PasswordsTable();
         }
-        public Tuple<UserDTO?, string> PostEmailPassword(RequestLogin data)
+        public ResponseDTOLogin PostEmailPassword(RequestLogin data)
         {
+            ResponseDTOLogin response = new ResponseDTOLogin();
             Email? emailExist = _contextEmail.PostEmail(data);
-            Password? passwordExist = _contextPassword.PostPassword(data);
 
-            if (emailExist == null || passwordExist == null) return new Tuple<UserDTO?, string>(null, "Email ou senha invalida!");
+            if (emailExist == null)
+            {
+                response.Message = "Email ou senha invalida!";
+                return response;
+            };
 
-            User? userValid = _contextUser.PostUser(emailExist, passwordExist);
+            User? userValid = _contextUser.PostUser(emailExist);
 
-            if (userValid == null) return new Tuple<UserDTO?, string>(null, "Usuário não encontrado!");
+            if (userValid.ActiveUser == 0)
+            {
+                response.Message = "Conta desativada!";
+                return response;
+            }
+
+            Password? passwordExist = _contextPassword.PostPassword(userValid.PasswordId);
+
+
+            if (passwordExist.UserPassword != data.Password)
+            {
+                response.Message = "Email ou senha invalida!";
+                return response; 
+            }
 
             UserDTO? user = new UserDTO
             {
@@ -37,13 +54,8 @@ namespace MamazonApi.Services
                 ActiveUser = userValid.ActiveUser,
             };
 
-            if (user.ActiveUser == 0)
-            {
-                return new Tuple<UserDTO?, string>(null, "Conta desativada!");
-            }
-
-            return new Tuple<UserDTO?, string>(user, "Ok!");
-            
+            response.User = user;
+            return response;
         }
     }
 }
