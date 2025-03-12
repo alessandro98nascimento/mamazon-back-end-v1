@@ -1,6 +1,7 @@
 ﻿using MamazonApi.Context;
 using MamazonApi.Controllers.DTORequest;
 using MamazonApi.Models;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace MamazonApi.Repository
 {
@@ -12,9 +13,9 @@ namespace MamazonApi.Repository
             _context = new AppDbContext();
         }
 
-        public Email? PostEmail(RequestLogin data)
+        public Email? PostEmail(string emailUser)
         {
-            Email? responseDb = _context.Emails.FirstOrDefault((e) => e.UserEmail == data.Email);
+            Email? responseDb = _context.Emails.FirstOrDefault((e) => e.UserEmail == emailUser);
             return responseDb;
         }
     }

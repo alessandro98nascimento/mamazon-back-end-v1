@@ -22,7 +22,7 @@ namespace MamazonApi.Services
         public ResponseDTOLogin PostEmailPassword(RequestLogin data)
         {
             ResponseDTOLogin response = new ResponseDTOLogin();
-            Email? emailExist = _contextEmail.PostEmail(data);
+            Email? emailExist = _contextEmail.PostEmail(data.Email);
 
             if (emailExist == null)
             {
