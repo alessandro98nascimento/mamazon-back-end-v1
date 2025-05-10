@@ -1,9 +1,7 @@
-﻿/*
-using Azure;
-using MamazonApi.Context;
+﻿using MamazonApi.Context;
+using MamazonApi.Controllers.DTORequest;
 using MamazonApi.Models;
 using MamazonApi.Repository;
-using MamazonApi.Repository.DTO;
 using MamazonApi.Services.DTO;
 using Microsoft.EntityFrameworkCore;
 
@@ -11,40 +9,53 @@ namespace MamazonApi.Services
 {
     public class LoginService
     {
-        private readonly UsersTable _context;
+        private readonly UsersTable _contextUser;
+        private readonly EmailsTable _contextEmail;
+        private readonly PasswordsTable _contextPassword;
 
         public LoginService()
         {
-            _context = new UsersTable();
+            _contextUser = new UsersTable();
+            _contextEmail = new EmailsTable();
+            _contextPassword = new PasswordsTable();
         }
-
-        public LoginService(AppDbContext? context) { _context = new UsersTable(); }
-
-        public UserDTO? GetUser(UserDTORequestLogin request)
+        public ResponseDTOLogin PostEmailPassword(RequestLogin data)
         {
-            var responseDb = _context.GetUser(request);
+            ResponseDTOLogin response = new ResponseDTOLogin();
+            Email? emailExist = _contextEmail.PostEmail(data.Email);
 
-            if (responseDb == null || responseDb.ActiveUser == 0) return null;
-            
-
-            UserDTO user = new UserDTO
+            if (emailExist == null)
             {
-                UserId = responseDb.UserId,
-                UserName = responseDb.UserName,
-                Email = responseDb.Email,
-                Password = responseDb.Password,
-                Adress = responseDb.Adress,
-                NumberHouse = responseDb.NumberHouse,
-                Cep = responseDb.Cep,
-                Complement = responseDb.Complement,
-                Neighborhood = responseDb.Neighborhood,
-                City = responseDb.City,
-                State = responseDb.State,
-                ActiveUser = responseDb.ActiveUser,
+                response.Message = "Email ou senha invalida!";
+                return response;
             };
 
-            return user;
+            User? userValid = _contextUser.PostUser(emailExist);
+
+            if (userValid.ActiveUser == 0)
+            {
+                response.Message = "Conta desativada!";
+                return response;
+            }
+
+            Password? passwordExist = _contextPassword.PostPassword(userValid.PasswordId);
+
+
+            if (passwordExist.UserPassword != data.Password)
+            {
+                response.Message = "Email ou senha invalida!";
+                return response; 
+            }
+
+            UserDTO? user = new UserDTO
+            {
+                UserId = userValid.UserId,
+                UserName = userValid.UserName,
+                ActiveUser = userValid.ActiveUser,
+            };
+
+            response.User = user;
+            return response;
         }
     }
 }
-*/

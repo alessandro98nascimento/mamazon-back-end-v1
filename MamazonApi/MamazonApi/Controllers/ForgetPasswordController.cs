@@ -1,12 +1,11 @@
-﻿/*
-using MamazonApi.Repository.DTO;
+﻿using MamazonApi.Controllers.DTORequest;
 using MamazonApi.Services;
-using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
-
 
 namespace MamazonApi.Controllers
 {
+    [Route("[controller]")]
+    [ApiController]
     public class ForgetPasswordController : ControllerBase
     {
         private readonly ForgetPasswordService _context;
@@ -16,23 +15,21 @@ namespace MamazonApi.Controllers
         [HttpPost]
         [Route("/forget-password")]
 
-        public ActionResult PostUserByEmail([FromBody] UserEmailRequestDTO request)
+        public IActionResult PostEmail([FromBody] RequestEmail request)
         {
-            var response = _context.PostUserByEmail(request);
-
-            if (response == null) return BadRequest(new {});
-
+            bool emailExist = _context.ExistEmail(request);
+            if (emailExist == false) return BadRequest();
             return Ok();
         }
 
         [HttpPut]
-        [Route("/forget-Password")]
-        public ActionResult PutPassword([FromBody] UserNewPasswordRequestDTO request)
+        [Route("/forget-password")]
+
+        public IActionResult PutPassword([FromBody] RequestUpdatePassword request)
         {
-            var response = _context.PutPassword(request);
-            if (response == null) return BadRequest();
-            return NoContent();
+            var response = _context.UpdatePassword(request);
+            if(!response) return BadRequest();
+            return Ok(response);
         }
     }
 }
-*/

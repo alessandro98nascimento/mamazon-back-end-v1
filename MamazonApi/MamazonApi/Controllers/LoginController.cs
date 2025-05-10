@@ -1,5 +1,4 @@
-﻿/*
-using MamazonApi.Repository.DTO;
+﻿using MamazonApi.Controllers.DTORequest;
 using MamazonApi.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -16,14 +15,12 @@ namespace MamazonApi.Controllers
         [HttpPost]
         [Route("/login")]
 
-        public ActionResult PostUser([FromBody] UserDTORequestLogin request) 
+        public ActionResult PostUser([FromBody] RequestLogin data)
         {
-            var reponse = _context.GetUser(request);
+            var response = _context.PostEmailPassword(data);
 
-            if (reponse == null)  return BadRequest(new { });
-
-            return Ok(new { token = "blablabla" });
+            if(response.User == null) return BadRequest(response.Message);
+            return Ok(response.User);
         }
     }
 }
-*/

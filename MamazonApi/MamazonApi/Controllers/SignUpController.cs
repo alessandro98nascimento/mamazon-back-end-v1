@@ -1,28 +1,22 @@
-﻿/*
-using MamazonApi.Repository.DTO;
+﻿using MamazonApi.Controllers.DTORequest;
 using MamazonApi.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MamazonApi.Controllers
 {
-    public class SignUpController: ControllerBase
+    [Route("[controller]")]
+    [ApiController]
+    public class SignUpController : ControllerBase
     {
-        public readonly SignUpService _context;
-
+        private readonly SignUpService _context;
         public SignUpController() { _context = new SignUpService(); }
 
         [HttpPost]
-        [Route("/SignUp")]
+        [Route("/sign-Up")]
 
-        public ActionResult PostNewUser([FromBody] NewUserDTORequest request)
+        public IActionResult PostNewUser(RequestNewUser newUser)
         {
-
-            var response = _context.AddNewUser(request);
-
-            return Created("Created", response);
+            var newPassword = _context.AddNewUser(newUser);
         }
-
-
     }
 }
-*/

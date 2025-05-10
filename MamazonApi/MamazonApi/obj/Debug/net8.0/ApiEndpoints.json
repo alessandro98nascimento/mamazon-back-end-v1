@@ -1,1 +1,50 @@
-[]
+[
+  {
+    "ContainingType": "MamazonApi.Controllers.ForgetPasswordController",
+    "Method": "PostEmail",
+    "RelativePath": "forget-password",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "MamazonApi.Controllers.DTORequest.RequestEmail",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MamazonApi.Controllers.ForgetPasswordController",
+    "Method": "PutPassword",
+    "RelativePath": "forget-password",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "MamazonApi.Controllers.DTORequest.RequestUpdatePassword",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MamazonApi.Controllers.LoginController",
+    "Method": "PostUser",
+    "RelativePath": "login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "data",
+        "Type": "MamazonApi.Controllers.DTORequest.RequestLogin",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

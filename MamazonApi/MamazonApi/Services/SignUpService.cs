@@ -1,37 +1,29 @@
-﻿/*
-using Azure.Core;
-using MamazonApi.Models;
+﻿using MamazonApi.Controllers.DTORequest;
 using MamazonApi.Repository;
-using MamazonApi.Repository.DTO;
 
 namespace MamazonApi.Services
 {
     public class SignUpService
     {
-        private readonly UsersTable _context;
+        private readonly UsersTable _contextUser;
+        private readonly PasswordsTable _contextPassword;
+        private readonly EmailsTable _contextEmail;
 
-        public SignUpService(){ _context = new UsersTable(); }
-
-        public User? AddNewUser(NewUserDTORequest request)
+        public SignUpService()
         {
-            User? newUser = new User
-            {
-                UserName = request.UserName,
-                Email = request.Email,
-                Password = request.Password,
-                Adress = request.Adress,
-                NumberHouse = request.NumberHouse,
-                Cep = request.Cep,
-                Complement = request.Complement,
-                Neighborhood = request.Neighborhood,
-                City = request.City,
-                State = request.State,
-                ActiveUser = 1
-            };
-            User? responseDb = _context.PostNewUser(newUser);
+            _contextUser = new UsersTable();
+            _contextPassword = new PasswordsTable();
+            _contextEmail = new EmailsTable();
+        }
 
-            return responseDb;
+        public object AddNewUser(RequestNewUser newUser)
+        {
+
+        }
+
+        public object AddPassword(string userPassword)
+        {
+
         }
     }
 }
-*/

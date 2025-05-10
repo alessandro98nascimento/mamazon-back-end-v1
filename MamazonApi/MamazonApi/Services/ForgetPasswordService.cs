@@ -1,36 +1,38 @@
-﻿/*
+﻿using MamazonApi.Controllers.DTORequest;
+using MamazonApi.Models;
 using MamazonApi.Repository;
-using MamazonApi.Repository.DTO;
-using MamazonApi.Services.DTO;
 
 namespace MamazonApi.Services
 {
     public class ForgetPasswordService
     {
-        private readonly UsersTable _context;
+        private readonly UsersTable _contextUser;
+        private readonly PasswordsTable _contextPassword;
+        private readonly EmailsTable _contextEmail;
+
         public ForgetPasswordService()
         {
-            _context = new UsersTable();
+            _contextUser = new UsersTable();
+            _contextPassword = new PasswordsTable();
+            _contextEmail = new EmailsTable();
         }
 
-        public UserEmailRequestDTO? PostUserByEmail(UserEmailRequestDTO request)
+        public bool ExistEmail(RequestEmail request)
         {
-            var responseDb = _context.GetUserByEmail(request);
-
-            if (responseDb == null) return null;
-
-            return request;
-
+            Email? emailExist = _contextEmail.PostEmail(request.Email);
+            if (emailExist == null) return false;
+            return true;
         }
 
-        public UserNewPasswordRequestDTO? PutPassword(UserNewPasswordRequestDTO request)
+        public bool UpdatePassword(RequestUpdatePassword request)
         {
-            var responseDb = _context.PutUserPassword(request);
-            if (request.Password != responseDb.Password) return null;
-            return request;
+            Email? emailUser = _contextEmail.PostEmail(request.Email);
+            if (emailUser == null) return false;
+            User? user = _contextUser.PostUser(emailUser);
+            if (user == null) return false;
+            Password? newPassword = _contextPassword.PutPassword(user.PasswordId ,request.Password);
+            if(newPassword == null) return false;
+            return true;
         }
     }
-
-    
 }
-*/
